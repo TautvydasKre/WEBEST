@@ -1,0 +1,375 @@
+:root {
+  /* Colors */
+  --primary-color: #2D3E50;
+  --secondary-color: #8CBFB3;
+  --hover-color1: #7aa8a1;
+  --hover-color2: #3E5065;
+  --white-color: #ffffff;
+  --placeholder-color: #ccc;
+  --dark-color: #222;
+  --light-text-color: #D0E0E0; /* Lighter version of secondary color */
+
+  /* Sizes */
+  --navbar-height: 60px;
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --padding-large: 40px;
+  --border-radius: 5px;
+  --card-max-width: 300px;
+  --hero-max-width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  color: var(--dark-color); /* Default text color */
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: var(--padding-small) 0;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding-medium);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: var(--padding-medium);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--light-text-color);
+  font-size: 16px;
+}
+
+#navbar.transparent {
+  background-color: transparent;
+}
+
+#navbar.solid {
+  background-color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - var(--navbar-height)); /* Adjust for navbar height */
+  position: relative;
+  z-index: 1;
+}
+
+.left-side {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.logo {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.right-side {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: var(--padding-medium);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: var(--hero-max-width);
+}
+
+.hero-content h1 {
+  margin-bottom: var(--padding-small);
+}
+
+.hero-content p {
+  margin-bottom: var(--padding-large);
+}
+
+.hero-content .btn {
+  padding: var(--padding-small) var(--padding-medium);
+  background-color: var(--secondary-color);
+  color: var(--dark-color); /* Button text color */
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.hero-content .btn:hover {
+  background-color: var(--hover-color1);
+}
+
+.about {
+  border-top: var(--primary-color) 5px solid;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  padding: var(--padding-large) var(--padding-medium);
+  text-align: center;
+}
+
+.about h2 {
+  font-weight: 700; /* Increase font weight */
+  letter-spacing: 2px; /* Add letter spacing */
+  line-height: 1.5; /* Adjust line height */
+  margin-bottom: var(--padding-medium); /* Add some margin below the heading */
+}
+
+.about p {
+  font-weight: 500; /* Make the paragraph text slightly bolder */
+  letter-spacing: 1px; /* Add some letter spacing */
+  line-height: 1.6; /* Increase line height for better readability */
+  max-width: 800px; /* Limit the width of the text for better readability */
+  margin: 0 auto; /* Center the text */
+  padding: 0 var(--padding-small); /* Add some padding */
+}
+
+.skills {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  padding: var(--padding-large) var(--padding-medium);
+  text-align: center;
+}
+
+.skills h2 {
+  font-weight: 700; /* Increase font weight */
+  letter-spacing: 2px; /* Add letter spacing */
+  line-height: 1.5; /* Adjust line height */
+  margin-bottom: var(--padding-large);
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--padding-medium);
+}
+
+.skills-icons i {
+  font-size: 3em; /* Adjust size as needed */
+  color: var(--dark-color); /* Use a color that matches your style */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.skills-icons i:hover {
+  transform: scale(1.2);
+  color: var(--hover-color2); /* Change to a hover color if desired */
+}
+
+.our-works {
+  background-color: var(--secondary-color);
+  color: var(--dark-color); /* Text color for consistency */
+}
+
+.work-cards > .card {
+  background-color: var(--primary-color);
+  color: var(--light-text-color); /* Text color for consistency */
+}
+
+.testimonials {
+  background-color: var(--primary-color);
+  color: var(--light-text-color); /* Text color for consistency */
+}
+
+.testimonial-cards > .card {
+  background-color: var(--secondary-color);
+  color: var(--dark-color); /* Text color for consistency */
+}
+
+.contact {
+  background-color: var(--secondary-color);
+  color: var(--dark-color); /* Text color for consistency */
+}
+
+.services> h2{
+  color: var(--light-text-color);
+
+}
+.services,
+.our-works,
+.testimonials,
+.contact {
+  padding: var(--padding-large) var(--padding-medium);
+  text-align: center;
+}
+
+.services h2,
+.our-works h2,
+.testimonials h2,
+.contact h2 {
+  margin-bottom: var(--padding-large);
+}
+
+.services {
+  background-color: var(--primary-color);
+  height: 80vh;
+}
+
+.services::after {
+  z-index: 1;
+}
+
+.service-cards,
+.work-cards,
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-cards{
+  margin-top: 80px;
+}
+
+.service-cards > .card {
+  background-color: var(--secondary-color);
+  color: var(--dark-color); /* Text color for consistency */
+  margin: var(--padding-small);
+  max-width: var(--card-max-width); /* Ensure cards fit within the section */
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: var(--padding-small);
+  max-width: var(--card-max-width);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: var(--padding-medium);
+  text-align: left;
+}
+
+.card h3 {
+  margin: 0 0 var(--padding-small);
+}
+
+.card p {
+  margin: 0 0 var(--padding-medium);
+}
+
+.card a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-cards .card {
+  max-width: 500px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: var(--padding-small);
+  margin: var(--padding-small) 0;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: var(--placeholder-color);
+}
+
+.contact button {
+  padding: var(--padding-small) var(--padding-medium);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.contact button:hover {
+  background-color: var(--hover-color2);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: var(--padding-medium);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-social a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  margin: 0 var(--padding-small);
+}
+
+.footer-social a {
+  font-size: 1.5em;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: -1;
+}

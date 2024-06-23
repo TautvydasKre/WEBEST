@@ -1,78 +1,151 @@
-<!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Landing Page</title>
-    <!-- Link your CSS file here -->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- You can add any additional meta tags, scripts, or stylesheets here -->
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webest</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/Favicon Original.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">Webest</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-
-    <!-- Hero Section -->
-    <header>
-      <section id="" class="hero">
-        <div class="hero-content">
-          <h1>Your Business Name</h1>
-          <p>Your business slogan or tagline goes here.</p>
-          <a href="#contact" class="btn">Get Started</a>
+    <div class="container">
+        <div class="left-side">
+            <img src="./assets/img/logo/Transparent Logo.png" alt="Webest Logo" class="logo">
         </div>
-      </section>
-    </header>
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
+        <div class="right-side hero">
+            <div class="hero-content">
+                <h1>Welcome to Webest</h1>
+                <p>Your partner in digital transformation</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <section class="about" id="about">
         <h2>About Us</h2>
-        <p>
-          This section can contain information about your business, its history,
-          mission, and values.
-        </p>
-      </div>
+        <p>Hello! We are a team of passionate web developers specializing in JavaScript, HTML, CSS, and React. As a newly established business, our mission is to create user-friendly, efficient, and visually appealing web applications that help businesses thrive in the digital world.</p>
+        <article class="skills" id="skills">
+            <div class="skills-icons">
+                <i class="fab fa-js-square"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-react"></i>
+                <i class="fab fa-node-js"></i>
+                <i class="fab fa-sass"></i>
+            </div>
+        </article>
     </section>
-
-    <!-- Services Section -->
-    <section id="services">
-      <div class="container">
+    <section class="services" id="services">
         <h2>Our Services</h2>
-        <div class="service">
-          <h3>Service 1</h3>
-          <p>Description of Service 1 goes here.</p>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Building responsive and modern websites.</p>
+            </div>
+            <div class="card">
+                <h3>UI/UX Design</h3>
+                <p>Creating user-friendly and beautiful designs.</p>
+            </div>
+            <div class="card">
+                <h3>E-commerce Solutions</h3>
+                <p>Developing online stores to boost your sales.</p>
+            </div>
+            <div class="card">
+                <h3>Website Maintenance</h3>
+                <p>Providing ongoing support and updates for websites.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Optimization</h3>
+                <p>Improving your website's visibility on search engines.</p>
+            </div>
+            <div class="card">
+                <h3>Performance Optimization</h3>
+                <p>Enhancing website speed and performance.</p>
+            </div>
+            <div class="card">
+                <h3>API Integration</h3>
+                <p>Integrating third-party APIs to enhance functionality.</p>
+            </div>
         </div>
-        <div class="service">
-          <h3>Service 2</h3>
-          <p>Description of Service 2 goes here.</p>
-        </div>
-        <!-- Add more services as needed -->
-      </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
+    <section class="our-works" id="portfolio">
+        <h2>Our Works</h2>
+        <div class="work-cards">
+            <div class="card">
+                <img src="path/to/work1.png" alt="Work 1">
+                <div class="card-content">
+                    <h3>Project Title 1</h3>
+                    <p>Description of the project.</p>
+                    <a href="http://example.com" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="path/to/work2.png" alt="Work 2">
+                <div class="card-content">
+                    <h3>Project Title 2</h3>
+                    <p>Description of the project.</p>
+                    <a href="http://example.com" target="_blank">View Project</a>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-cards">
+            <div class="card">
+                <p>"Webest transformed our online presence. Highly recommend!"</p>
+                <h3>- Client Name</h3>
+            </div>
+            <div class="card">
+                <p>"Professional and reliable service from start to finish."</p>
+                <h3>- Client Name</h3>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>
-          You can provide a contact form or simply list your contact information
-          here.
-        </p>
-      </div>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
     </section>
-
-    <!-- Footer Section -->
     <footer>
-      <div class="container">
-        <p>&copy; 2024 Your Business Name. All rights reserved.</p>
-      </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-contact">
+                <p>Email: webest@gmail.com</p>
+                <p>Phone: +37061772484</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Webest. All rights reserved.</p>
     </footer>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
